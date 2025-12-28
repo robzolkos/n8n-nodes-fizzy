@@ -29,6 +29,7 @@
     "format": "prettier nodes credentials --write",
     "lint": "n8n-node lint",
     "lintfix": "n8n-node lint --fix",
+    "release": "n8n-node release",
     "prepublishOnly": "npm run build && npm run lint",
     "test": "vitest run",
     "test:watch": "vitest"
