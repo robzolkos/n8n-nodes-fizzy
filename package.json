@@ -1,0 +1,59 @@
+{
+  "name": "n8n-nodes-fizzy",
+  "version": "0.1.0",
+  "description": "n8n community node for Fizzy - the kanban tool by 37signals",
+  "keywords": [
+    "n8n-community-node-package",
+    "fizzy",
+    "37signals",
+    "kanban"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rzolkos/n8n-nodes-fizzy",
+  "author": {
+    "name": "Rob Zolkos",
+    "email": "rob@zolkos.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rzolkos/n8n-nodes-fizzy.git"
+  },
+  "engines": {
+    "node": ">=20.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "n8n-node build",
+    "dev": "n8n-node dev",
+    "format": "prettier nodes credentials --write",
+    "lint": "n8n-node lint",
+    "lintfix": "n8n-node lint --fix",
+    "prepublishOnly": "npm run build && npm run lint",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/FizzyApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Fizzy/Fizzy.node.js",
+      "dist/nodes/Fizzy/FizzyTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.17.0",
+    "@types/node": "^22.0.0",
+    "n8n-workflow": "^1.0.0",
+    "prettier": "^3.0.0",
+    "vitest": "^2.0.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
