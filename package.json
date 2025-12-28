@@ -9,14 +9,14 @@
     "kanban"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/rzolkos/n8n-nodes-fizzy",
+  "homepage": "https://github.com/robzolkos/n8n-nodes-fizzy",
   "author": {
     "name": "Rob Zolkos",
     "email": "rob@zolkos.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rzolkos/n8n-nodes-fizzy.git"
+    "url": "https://github.com/robzolkos/n8n-nodes-fizzy.git"
   },
   "engines": {
     "node": ">=20.0"
