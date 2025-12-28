@@ -35,8 +35,6 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 npm install n8n-nodes-fizzy
 ```
 
-Or search for "Fizzy" in the n8n community nodes panel.
-
 ## Nodes
 
 ### Fizzy
