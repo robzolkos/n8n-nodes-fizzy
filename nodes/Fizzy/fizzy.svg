@@ -1,23 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Dark blue/purple background like the Fizzy brand -->
-  <rect width="64" height="64" rx="12" ry="12" fill="#1a1a2e"/>
-  <!-- Colorful bubbles rising up, each a different vibrant color -->
-  <g>
-    <!-- Bottom row - larger bubbles -->
-    <circle cx="16" cy="48" r="5" fill="#ef4444"/>
-    <circle cx="32" cy="50" r="4.5" fill="#f97316"/>
-    <circle cx="48" cy="46" r="5" fill="#eab308"/>
-    <!-- Middle row -->
-    <circle cx="24" cy="36" r="4" fill="#22c55e"/>
-    <circle cx="40" cy="34" r="4.5" fill="#06b6d4"/>
-    <circle cx="52" cy="32" r="3" fill="#8b5cf6"/>
-    <!-- Upper middle -->
-    <circle cx="16" cy="28" r="3.5" fill="#ec4899"/>
-    <circle cx="32" cy="24" r="4" fill="#3b82f6"/>
-    <circle cx="46" cy="22" r="3" fill="#14b8a6"/>
-    <!-- Top row - smaller bubbles -->
-    <circle cx="22" cy="14" r="2.5" fill="#f59e0b"/>
-    <circle cx="38" cy="12" r="2" fill="#a855f7"/>
-    <circle cx="50" cy="14" r="2" fill="#ef4444"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048" width="2048" height="2048">
+  <defs>
+    <!-- Bar 1 - Blue -->
+    <linearGradient id="bar1-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0158ff"/>
+      <stop offset="50%" stop-color="#0b8afe"/>
+      <stop offset="100%" stop-color="#32c1fe"/>
+    </linearGradient>
+    <linearGradient id="bar1-refl" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6e8ab9"/>
+      <stop offset="60%" stop-color="#3a5a8f"/>
+      <stop offset="100%" stop-color="#031a5f"/>
+    </linearGradient>
+
+    <!-- Bar 2 - Pink (tallest) -->
+    <linearGradient id="bar2-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fc12c3"/>
+      <stop offset="40%" stop-color="#fd32cf"/>
+      <stop offset="70%" stop-color="#fc51dd"/>
+      <stop offset="100%" stop-color="#fe76e9"/>
+    </linearGradient>
+    <linearGradient id="bar2-refl" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7b5a90"/>
+      <stop offset="60%" stop-color="#4a4078"/>
+      <stop offset="100%" stop-color="#031a5f"/>
+    </linearGradient>
+
+    <!-- Bar 3 - Orange (tall) -->
+    <linearGradient id="bar3-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fc5a00"/>
+      <stop offset="40%" stop-color="#fd8500"/>
+      <stop offset="70%" stop-color="#feba00"/>
+      <stop offset="100%" stop-color="#ffe200"/>
+    </linearGradient>
+    <linearGradient id="bar3-refl" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8a7a68"/>
+      <stop offset="60%" stop-color="#5a5048"/>
+      <stop offset="100%" stop-color="#031a5f"/>
+    </linearGradient>
+
+    <!-- Bar 4 - Yellow-Green (shortest) -->
+    <linearGradient id="bar4-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#748800"/>
+      <stop offset="50%" stop-color="#b3c400"/>
+      <stop offset="100%" stop-color="#d9dd00"/>
+    </linearGradient>
+    <linearGradient id="bar4-refl" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c856d"/>
+      <stop offset="60%" stop-color="#4d5545"/>
+      <stop offset="100%" stop-color="#031a5f"/>
+    </linearGradient>
+
+    <!-- Bar 5 - Cyan -->
+    <linearGradient id="bar5-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0098c9"/>
+      <stop offset="50%" stop-color="#00c2df"/>
+      <stop offset="100%" stop-color="#00eaf4"/>
+    </linearGradient>
+    <linearGradient id="bar5-refl" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5888a0"/>
+      <stop offset="60%" stop-color="#306080"/>
+      <stop offset="100%" stop-color="#031a5f"/>
+    </linearGradient>
+
+    <!-- Stroke gradients (darker border colors) -->
+    <linearGradient id="bar1-stroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0040a0"/>
+      <stop offset="100%" stop-color="#1090c0"/>
+    </linearGradient>
+    <linearGradient id="bar2-stroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#601080"/>
+      <stop offset="100%" stop-color="#903090"/>
+    </linearGradient>
+    <linearGradient id="bar3-stroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#603010"/>
+      <stop offset="100%" stop-color="#806020"/>
+    </linearGradient>
+    <linearGradient id="bar4-stroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#405000"/>
+      <stop offset="100%" stop-color="#607000"/>
+    </linearGradient>
+    <linearGradient id="bar5-stroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#006080"/>
+      <stop offset="100%" stop-color="#0090a0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2048" height="2048" fill="#031a5f"/>
+
+  <!-- Bar 1 - Blue: pill ends ~y=1350, reflection to ~1995 -->
+  <rect x="396" y="395" width="169" height="955" rx="84" ry="84" fill="url(#bar1-grad)" stroke="url(#bar1-stroke)" stroke-width="4"/>
+  <rect x="455" y="1350" width="51" height="645" fill="url(#bar1-refl)"/>
+
+  <!-- Bar 2 - Pink: pill ends ~y=1660, reflection to ~2025 -->
+  <rect x="667" y="395" width="170" height="1265" rx="85" ry="85" fill="url(#bar2-grad)" stroke="url(#bar2-stroke)" stroke-width="4"/>
+  <rect x="726" y="1660" width="51" height="365" fill="url(#bar2-refl)"/>
+
+  <!-- Bar 3 - Orange: pill ends ~y=1505, reflection to ~2024 -->
+  <rect x="939" y="395" width="170" height="1110" rx="85" ry="85" fill="url(#bar3-grad)" stroke="url(#bar3-stroke)" stroke-width="4"/>
+  <rect x="998" y="1505" width="51" height="519" fill="url(#bar3-refl)"/>
+
+  <!-- Bar 4 - Yellow-Green: pill ends ~y=1193, reflection to ~2015 -->
+  <rect x="1211" y="395" width="170" height="798" rx="85" ry="85" fill="url(#bar4-grad)" stroke="url(#bar4-stroke)" stroke-width="4"/>
+  <rect x="1270" y="1193" width="51" height="822" fill="url(#bar4-refl)"/>
+
+  <!-- Bar 5 - Cyan: pill ends ~y=1350, reflection to ~1974 -->
+  <rect x="1483" y="395" width="170" height="955" rx="85" ry="85" fill="url(#bar5-grad)" stroke="url(#bar5-stroke)" stroke-width="4"/>
+  <rect x="1542" y="1350" width="51" height="624" fill="url(#bar5-refl)"/>
 </svg>

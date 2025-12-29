@@ -155,3 +155,7 @@ Notify team members via Slack DM when they're assigned to a card.
 ## License
 
 [MIT](LICENSE)
+
+---
+
+<sub>Fizzy is a trademark of 37signals, LLC. The Fizzy logo is used with permission.</sub>
