@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-fizzy",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "n8n community node for Fizzy - the kanban tool by 37signals",
   "keywords": [
     "n8n-community-node-package",
