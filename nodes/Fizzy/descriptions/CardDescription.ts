@@ -227,8 +227,8 @@ export const cardFields: INodeProperties[] = [
     },
     options: [
       {
-        displayName: 'Body',
-        name: 'body',
+        displayName: 'Description',
+        name: 'description',
         type: 'string',
         typeOptions: {
           editor: 'htmlEditor',
@@ -368,8 +368,8 @@ export const cardFields: INodeProperties[] = [
         description: 'The new title of the card',
       },
       {
-        displayName: 'Body',
-        name: 'body',
+        displayName: 'Description',
+        name: 'description',
         type: 'string',
         typeOptions: {
           editor: 'htmlEditor',
